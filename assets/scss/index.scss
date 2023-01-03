@@ -1,0 +1,121 @@
+@import "./_settings" ;
+
+.app{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient($first , $third , white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width:550px) {
+        height: auto;
+        background: white;
+
+    }
+    .app-box{
+        width: 400px;
+        padding: 20px 0;
+        background: url(./assets/pics/fond.jpg) no-repeat;
+        background-size: cover;
+        padding-bottom: 140px;
+        @media screen and (max-width:400px) {
+            width: 100%;
+        }
+        .app-header{
+            width: 100%;
+            h1{
+                text-align: center;
+                font-weight: bold;
+                color: $first;
+                text-shadow: 2px 2px $bg;
+            }
+        }
+        .app-body{
+            display: flex;
+            justify-content: center;
+            fieldset{
+                padding: 8px;
+                legend{
+                    font-weight: bold;
+                    color: $second;
+                    text-shadow: 2px 2px whitesmoke;
+                    width: auto;
+                    padding-left : 20px;
+                    padding-right: 20px;
+                }
+                width: 90%;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 4px 4px 5px silver;
+                .league{
+                    display: grid;
+                    grid-template-columns: 33% 33% 33%;
+                    gap: 10px 5px ;
+                    @media screen and (max-width:370px) {
+                        grid-template-columns: 50% 50%;
+                    }
+                    a{
+                        img{
+                            width: 100%;
+                            height: 100px;
+                            object-fit: cover;
+                            &:hover{
+                                border-radius: 40px;
+                                transition: 1s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .app-wait{
+        width: 400px;
+        height: 90vh;
+        background: white;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @media screen and (max-width:400px) {
+            width: 100%;
+        }
+        img{
+            width: 200px;
+            animation: Anim1 4s;
+        }
+        button{
+            position: absolute;
+            bottom: 20px;
+            width: 90%;
+            font-weight: bolder;
+            animation: Anim2 4s;
+        }
+    }
+}
+
+@keyframes Anim1 {
+    0%{
+        transform: scale(0);
+    }
+    
+    75%{
+        transform: scale(1.4);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes Anim2 {
+    0%{
+        opacity: 0;
+    }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

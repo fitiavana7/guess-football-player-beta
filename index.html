@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess football player</title>
+    <link rel="shortcut icon" href="./assets/pics/logo.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/w3.css">
+    <link rel="stylesheet" href="./assets/css/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+    <div class="app">
+        <div class="app-box" id="app">
+            <div class="app-header">
+                <h1>GUESS THE FOOTBALL PLAYER</h1>
+            </div>
+            <div class="app-body">
+                <fieldset>
+                    <legend>SELECT THE LEAGUE</legend>
+                    <div class="league">
+                        <a href="./assets/pages/epl/ronaldo.html">
+                            <img src="./assets/pics/epl.jpg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./assets/pics/bundesliga.jpg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./assets/pics/liga.jpg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./assets/pics/ligue1.jpg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./assets/pics/serieA.jpg" alt="">
+                        </a>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="app-wait" id="chargement">
+            <img src="./assets/pics/logo.jpg" alt="">
+            <button id="boutton" class="btn btn-primary">
+                READY
+            </button>
+        </div>
+    </div>
+    <script>
+        var app = document.getElementById('app') , 
+        chargement = document.getElementById('chargement') , 
+        boutton = document.getElementById('boutton') ;
+
+        app.style.display = "none" ;
+
+        boutton.onclick = function () {
+            app.style.display = "block" ; 
+            chargement.style.display = "none" ;
+        }
+
+    </script>
+</body>
+</html>

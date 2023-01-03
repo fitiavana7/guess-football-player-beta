@@ -1,0 +1,119 @@
+@import "./_settings" ;
+.app{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient($first , $third , white);
+    height: 100vh;
+    @media screen and (max-width:550px) {
+        height: auto;
+    }
+    .app-wait{
+        width: 400px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(208, 32, 117);
+        @media screen and (max-width:400px) {
+            width: 100%;
+        }
+        .wait-box{
+            text-align: center;
+            animation: Anim1 2s;
+            img{
+                width: 200px;
+                border-radius: 100%;
+            }
+            h1{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: white;
+            }
+
+        }
+    }
+    .app-box{
+        width: 400px;
+        background: $bg;
+        @media screen and (max-width:400px) {
+            width: 100%;
+        }
+        .box-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8037d;
+            padding-right: 10px;
+            img{
+                width: 50px;
+            }
+            h3{
+                font-weight: bold;
+            }
+        }
+        .box-result{
+            background: red;
+            margin-top: 8px;
+            p{
+                background: white;
+                font-size: 30px;
+                height: 45px;
+                color: $second;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        }
+        .box-img{
+            display: flex;
+            justify-content: center;
+            margin: 8px 0;
+            img{
+                width: 90%;
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+        .box-reponse{
+            padding: 0 20px;
+            button{
+                font-weight: bold;
+            }
+            .box1{
+                height: 35px;
+                display: flex;
+                justify-content: space-around;
+                margin: 10px 0;
+            }
+            .box2{
+                height: 35px;
+                display: flex;
+                justify-content: space-around;
+                margin: 10px 0;
+            }
+        }
+        .box-boutton{
+            display: flex;
+            padding: 0 20px;
+            margin-top: 25px;
+            margin-bottom: 40px;
+            .btn{
+                width: 50%;
+                margin: 0 8px;
+            }
+        }
+    }
+}
+@keyframes Anim1 {
+    0%{
+        opacity: 0;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
